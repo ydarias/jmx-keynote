@@ -12,4 +12,6 @@ public interface SystemConfigMBean {
 
     public String doConfig();
 
+    public String doConfigChange(int threads);
+
 }

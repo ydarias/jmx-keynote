@@ -34,4 +34,10 @@ public class SystemConfig implements SystemConfigMBean {
         return "No of Threads=" + this.threadCount + " and DB Schema Name=" + this.schemaName;
     }
 
+    public String doConfigChange(int threads) {
+        this.threadCount = threads;
+
+        return doConfig();
+    }
+
 }
