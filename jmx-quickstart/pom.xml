@@ -10,6 +10,8 @@
 
     <properties>
         <metrics.version>3.1.0</metrics.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>

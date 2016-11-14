@@ -4,4 +4,8 @@ public interface SystemStatsMBean {
 
     public long getTotalWrites();
 
+    public int getThreads();
+
+    public void setThreads(int i);
+
 }

@@ -12,11 +12,15 @@ public class CommandWriter {
 
     Metrics metrics = new Metrics();
 
+    Configuration configuration = new Configuration();
+
     public CommandWriter() {
         try {
+            SystemStats systemStats = new SystemStats(metrics, configuration);
+
             MBeanServer beansServer = ManagementFactory.getPlatformMBeanServer();
             ObjectName beanName = new ObjectName("com.eightkdata.jmx:type=SystemStats");
-            beansServer.registerMBean(new SystemStats(metrics), beanName);
+            beansServer.registerMBean(systemStats, beanName);
         } catch (Exception e) {
             // Don't do this at home kids (just for the demo)
             e.printStackTrace();
